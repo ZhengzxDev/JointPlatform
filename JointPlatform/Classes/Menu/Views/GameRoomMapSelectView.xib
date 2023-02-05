@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameRoomMapSelectView" customModule="JointPlatform" customModuleProvider="target">
+            <connections>
+                <outlet property="mapImageView" destination="K3o-jb-1fp" id="hWf-KN-TQO"/>
+                <outlet property="mapNameLabel" destination="Pb3-xj-T5E" id="vBO-Zv-DVR"/>
+                <outlet property="nextButton" destination="kxJ-8S-jwO" id="aq6-aS-gMi"/>
+                <outlet property="panelView" destination="JMV-ah-VH2" id="fSJ-Ar-dYH"/>
+                <outlet property="previousButton" destination="NPv-Dw-6vV" id="VSq-HR-ukd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="394" height="348"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K3o-jb-1fp">
+                    <rect key="frame" x="0.0" y="0.0" width="394" height="348"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMV-ah-VH2">
+                    <rect key="frame" x="0.0" y="278" width="394" height="70"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb3-xj-T5E">
+                            <rect key="frame" x="70" y="0.0" width="254" height="70"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPv-Dw-6vV" customClass="CUButton" customModule="JointPlatform" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="yZM-VJ-eNp"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="gui_arrow_left_white"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                    <size key="value" width="25" height="25"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onPressPreviousMap:" destination="-1" eventType="touchUpInside" id="zTl-IW-WLe"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxJ-8S-jwO" customClass="CUButton" customModule="JointPlatform" customModuleProvider="target">
+                            <rect key="frame" x="324" y="0.0" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="yh1-5t-hZJ"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="gui_arrow_right_white"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                    <size key="value" width="25" height="25"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onPressNextMap:" destination="-1" eventType="touchUpInside" id="vKn-ts-zpv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Pb3-xj-T5E" firstAttribute="top" secondItem="JMV-ah-VH2" secondAttribute="top" id="0ga-K7-Exh"/>
+                        <constraint firstAttribute="height" constant="70" id="2ni-km-Ym2"/>
+                        <constraint firstItem="Pb3-xj-T5E" firstAttribute="leading" secondItem="NPv-Dw-6vV" secondAttribute="trailing" id="78U-cZ-rLY"/>
+                        <constraint firstAttribute="bottom" secondItem="Pb3-xj-T5E" secondAttribute="bottom" id="Dau-zg-hBl"/>
+                        <constraint firstAttribute="bottom" secondItem="NPv-Dw-6vV" secondAttribute="bottom" id="EVM-hB-sY4"/>
+                        <constraint firstAttribute="bottom" secondItem="kxJ-8S-jwO" secondAttribute="bottom" id="LRr-Cf-kZw"/>
+                        <constraint firstItem="kxJ-8S-jwO" firstAttribute="leading" secondItem="Pb3-xj-T5E" secondAttribute="trailing" id="Q1Y-q4-Mba"/>
+                        <constraint firstItem="NPv-Dw-6vV" firstAttribute="leading" secondItem="JMV-ah-VH2" secondAttribute="leading" id="WkD-QS-jDP"/>
+                        <constraint firstItem="NPv-Dw-6vV" firstAttribute="top" secondItem="JMV-ah-VH2" secondAttribute="top" id="jKB-D3-bRP"/>
+                        <constraint firstAttribute="trailing" secondItem="kxJ-8S-jwO" secondAttribute="trailing" id="jP5-P1-cyH"/>
+                        <constraint firstItem="kxJ-8S-jwO" firstAttribute="top" secondItem="JMV-ah-VH2" secondAttribute="top" id="jRH-xs-s2Q"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="K3o-jb-1fp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7eI-2J-zXF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="K3o-jb-1fp" secondAttribute="trailing" id="B3A-3J-RP6"/>
+                <constraint firstItem="JMV-ah-VH2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="GUe-2v-5A5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JMV-ah-VH2" secondAttribute="trailing" id="IXK-EG-BeC"/>
+                <constraint firstItem="K3o-jb-1fp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Wxe-5S-Gdv"/>
+                <constraint firstAttribute="bottom" secondItem="JMV-ah-VH2" secondAttribute="bottom" id="h5a-gc-YZR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="K3o-jb-1fp" secondAttribute="bottom" id="piP-fn-j6d"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="115.2" y="94.452773613193415"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="NPv-Dw-6vV">
+            <size key="intrinsicContentSize" width="88" height="78"/>
+        </designable>
+        <designable name="kxJ-8S-jwO">
+            <size key="intrinsicContentSize" width="88" height="78"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="gui_arrow_left_white" width="64" height="64"/>
+        <image name="gui_arrow_right_white" width="64" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

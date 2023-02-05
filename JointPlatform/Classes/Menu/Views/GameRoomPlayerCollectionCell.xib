@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GameRoomPlayerCollectionCell" customModule="JointPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="267" height="320"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="267" height="320"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SP7-D9-ulx" customClass="PixelTextLabel" customModule="JointPlatform" customModuleProvider="target">
+                        <rect key="frame" x="20" y="20" width="40" height="40"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="7nv-py-xg8"/>
+                            <constraint firstAttribute="height" constant="40" id="KRT-dy-edR"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCK-Fi-5IW">
+                        <rect key="frame" x="80" y="28.5" width="117" height="23"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gui_hero_unknown" translatesAutoresizingMaskIntoConstraints="NO" id="vXJ-An-ohc">
+                        <rect key="frame" x="74.5" y="91.5" width="118" height="145.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="vXJ-An-ohc" secondAttribute="height" multiplier="30:37" id="enY-FA-AmA"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6g-0V-t2g" customClass="CUButton" customModule="JointPlatform" customModuleProvider="target">
+                        <rect key="frame" x="23" y="147" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="Pxs-sD-aRf"/>
+                            <constraint firstAttribute="width" constant="35" id="nJe-Vz-bNq"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="gui_arrow_left_black" title=" "/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                <size key="value" width="25" height="25"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="onPressPreviousHero:" destination="gTV-IL-0wX" eventType="touchUpInside" id="xcf-Oe-yXl"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubL-oR-5Kr" customClass="CUButton" customModule="JointPlatform" customModuleProvider="target">
+                        <rect key="frame" x="201" y="147" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="bXZ-U1-Az4"/>
+                            <constraint firstAttribute="width" constant="35" id="vX7-T3-1hi"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="gui_arrow_right_black" title=" "/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                <size key="value" width="25" height="25"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="onPressNextHero:" destination="gTV-IL-0wX" eventType="touchUpInside" id="YLC-NG-Q6H"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWW-ci-XxN">
+                        <rect key="frame" x="0.0" y="260" width="267" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhL-lQ-5cM">
+                                <rect key="frame" x="103.5" y="19.5" width="60" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Ht0-Qc-bdq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQj-Hb-AnR" customClass="CUButton" customModule="JointPlatform" customModuleProvider="target">
+                                <rect key="frame" x="69" y="12.5" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="65g-l1-pkI"/>
+                                    <constraint firstAttribute="height" constant="35" id="gKE-Fd-hYQ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="gui_arrow_left_white"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                        <size key="value" width="25" height="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onPressPreviousTeam:" destination="gTV-IL-0wX" eventType="touchUpInside" id="vKQ-P5-Mej"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9EQ-9P-PlX" customClass="CUButton" customModule="JointPlatform" customModuleProvider="target">
+                                <rect key="frame" x="169" y="12.5" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="9mS-UA-pTu"/>
+                                    <constraint firstAttribute="height" constant="35" id="rQa-Iq-sk3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="gui_arrow_right_white"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                        <size key="value" width="25" height="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onPressNextTeam:" destination="gTV-IL-0wX" eventType="touchUpInside" id="VGt-GV-xai"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="QhL-lQ-5cM" firstAttribute="leading" secondItem="cQj-Hb-AnR" secondAttribute="trailing" constant="-0.5" id="90T-eU-exy"/>
+                            <constraint firstItem="9EQ-9P-PlX" firstAttribute="leading" secondItem="QhL-lQ-5cM" secondAttribute="trailing" constant="5.5" id="9c7-bA-Ecf"/>
+                            <constraint firstItem="QhL-lQ-5cM" firstAttribute="centerX" secondItem="PWW-ci-XxN" secondAttribute="centerX" id="I9j-Tt-20X"/>
+                            <constraint firstItem="9EQ-9P-PlX" firstAttribute="centerY" secondItem="QhL-lQ-5cM" secondAttribute="centerY" id="h8R-F0-3oC"/>
+                            <constraint firstAttribute="height" constant="60" id="hE2-3T-4UM"/>
+                            <constraint firstItem="QhL-lQ-5cM" firstAttribute="centerY" secondItem="PWW-ci-XxN" secondAttribute="centerY" id="xsG-Xy-ABW"/>
+                            <constraint firstItem="cQj-Hb-AnR" firstAttribute="centerY" secondItem="QhL-lQ-5cM" secondAttribute="centerY" id="zwG-6A-3RM"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="system_load_done" translatesAutoresizingMaskIntoConstraints="NO" id="AH1-fF-KyO">
+                        <rect key="frame" x="212" y="22.5" width="35" height="35"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="gVB-aU-aaQ"/>
+                            <constraint firstAttribute="width" constant="35" id="mro-BC-vIy"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="dCK-Fi-5IW" firstAttribute="centerY" secondItem="SP7-D9-ulx" secondAttribute="centerY" id="2xa-52-PNh"/>
+                <constraint firstItem="PWW-ci-XxN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6eb-1V-scM"/>
+                <constraint firstAttribute="trailing" secondItem="AH1-fF-KyO" secondAttribute="trailing" constant="20" id="6xV-vc-QiW"/>
+                <constraint firstAttribute="bottom" secondItem="PWW-ci-XxN" secondAttribute="bottom" id="A5g-6C-ZEr"/>
+                <constraint firstItem="vXJ-An-ohc" firstAttribute="leading" secondItem="u6g-0V-t2g" secondAttribute="trailing" constant="16.5" id="KbS-WF-7QU"/>
+                <constraint firstItem="ubL-oR-5Kr" firstAttribute="centerY" secondItem="vXJ-An-ohc" secondAttribute="centerY" id="Oc5-Vb-Rc7"/>
+                <constraint firstItem="vXJ-An-ohc" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="SA8-P2-MNI"/>
+                <constraint firstItem="ubL-oR-5Kr" firstAttribute="leading" secondItem="vXJ-An-ohc" secondAttribute="trailing" constant="8.5" id="YG1-Re-efj"/>
+                <constraint firstItem="SP7-D9-ulx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="bC7-tD-zvk"/>
+                <constraint firstItem="PWW-ci-XxN" firstAttribute="top" secondItem="vXJ-An-ohc" secondAttribute="bottom" constant="23" id="emD-Dx-UBk"/>
+                <constraint firstItem="AH1-fF-KyO" firstAttribute="centerY" secondItem="dCK-Fi-5IW" secondAttribute="centerY" id="hFc-Eg-cFf"/>
+                <constraint firstItem="u6g-0V-t2g" firstAttribute="centerY" secondItem="vXJ-An-ohc" secondAttribute="centerY" id="kC5-OB-Ma4"/>
+                <constraint firstItem="vXJ-An-ohc" firstAttribute="top" secondItem="dCK-Fi-5IW" secondAttribute="bottom" constant="40" id="m6U-9w-phq"/>
+                <constraint firstAttribute="trailing" secondItem="PWW-ci-XxN" secondAttribute="trailing" id="mnp-Hq-OPv"/>
+                <constraint firstItem="AH1-fF-KyO" firstAttribute="leading" secondItem="dCK-Fi-5IW" secondAttribute="trailing" constant="15" id="oVN-IX-1Rm"/>
+                <constraint firstItem="dCK-Fi-5IW" firstAttribute="leading" secondItem="SP7-D9-ulx" secondAttribute="trailing" constant="20" id="sKq-zB-3gX"/>
+                <constraint firstItem="SP7-D9-ulx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="vRe-oB-r5c"/>
+            </constraints>
+            <size key="customSize" width="267" height="320"/>
+            <connections>
+                <outlet property="heroArrowLeftButton" destination="u6g-0V-t2g" id="H7v-sa-UcV"/>
+                <outlet property="heroArrowRightButton" destination="ubL-oR-5Kr" id="Sia-hX-jjO"/>
+                <outlet property="heroImageView" destination="vXJ-An-ohc" id="r5k-WR-JoG"/>
+                <outlet property="indexLabel" destination="SP7-D9-ulx" id="mQT-1k-2Cg"/>
+                <outlet property="nameLabel" destination="dCK-Fi-5IW" id="0NF-Nz-XrK"/>
+                <outlet property="readyImageView" destination="AH1-fF-KyO" id="6iJ-a9-lAc"/>
+                <outlet property="teamArrowLeftButton" destination="cQj-Hb-AnR" id="t0V-y2-TnA"/>
+                <outlet property="teamArrowRightButton" destination="9EQ-9P-PlX" id="aNy-rc-9g2"/>
+                <outlet property="teamContainerView" destination="PWW-ci-XxN" id="6OI-hM-HVS"/>
+                <outlet property="teamLabel" destination="QhL-lQ-5cM" id="BKd-T3-KSP"/>
+            </connections>
+            <point key="canvasLocation" x="293.47826086956525" y="198.21428571428569"/>
+        </collectionViewCell>
+    </objects>
+    <designables>
+        <designable name="9EQ-9P-PlX">
+            <size key="intrinsicContentSize" width="88" height="78"/>
+        </designable>
+        <designable name="cQj-Hb-AnR">
+            <size key="intrinsicContentSize" width="88" height="78"/>
+        </designable>
+        <designable name="u6g-0V-t2g">
+            <size key="intrinsicContentSize" width="92" height="78"/>
+        </designable>
+        <designable name="ubL-oR-5Kr">
+            <size key="intrinsicContentSize" width="92" height="78"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="gui_arrow_left_black" width="64" height="64"/>
+        <image name="gui_arrow_left_white" width="64" height="64"/>
+        <image name="gui_arrow_right_black" width="64" height="64"/>
+        <image name="gui_arrow_right_white" width="64" height="64"/>
+        <image name="gui_hero_unknown" width="64" height="64"/>
+        <image name="system_load_done" width="64" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

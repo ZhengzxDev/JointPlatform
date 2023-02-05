@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GameRoomEmptyCollectionCell" customModule="JointPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="265" height="281"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="265" height="281"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_gamer" translatesAutoresizingMaskIntoConstraints="NO" id="QEz-8q-PcP">
+                        <rect key="frame" x="107.5" y="137.5" width="50" height="50"/>
+                        <color key="tintColor" white="0.0" alpha="0.20377842909624788" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="bqn-0i-TyY"/>
+                            <constraint firstAttribute="width" constant="50" id="vFu-Bi-Sdn"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="QEz-8q-PcP" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="Q7s-wD-l9X"/>
+                <constraint firstItem="QEz-8q-PcP" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="bH3-Pg-lLj"/>
+            </constraints>
+            <size key="customSize" width="265" height="281"/>
+            <point key="canvasLocation" x="287.68115942028987" y="161.71875"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon_gamer" width="64" height="64"/>
+    </resources>
+</document>
